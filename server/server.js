@@ -5,16 +5,20 @@ const response = require("./response");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  })
+);
 const port = 5000;
 
-const corsOptions = {
-  origin: "http://example.com",
-  optionSuccessStatus: 200,
-};
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
-app.get("/", cors(corsOptions), (req, res) => {
-  const sql = "SELECT * FROM nama_orang";
+app.get("/data", (req, res) => {
+  const sql = "SELECT * FROM courses";
   db.query(sql, (err, fields) => {
     if (err) throw err;
     response(200, fields, "success", res);
@@ -24,3 +28,4 @@ app.get("/", cors(corsOptions), (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+ 

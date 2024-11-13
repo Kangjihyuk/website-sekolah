@@ -109,4 +109,8 @@
     font-weight: 900;
     font-style: italic;
   }
+
   
+  body{
+    overflow-x: hidden;  
+  }

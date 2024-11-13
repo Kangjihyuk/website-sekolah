@@ -1,14 +1,17 @@
-import { Fragment } from "react";
+import { useEffect } from "react";
 import Navbar from "../components/Layouts/Navbar";
 import Home from "../components/Layouts/Home";
 
-const landingPage = () => {
+const LandingPage = () => {
+  useEffect(() => {
+    import("flowbite");
+  }, []);
   return (
-    <Fragment>
+    <>
       <Navbar />
       <Home />
-    </Fragment>
+    </>
   );
 };
 
-export default landingPage;
+export default LandingPage;
