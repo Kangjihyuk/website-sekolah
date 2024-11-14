@@ -18,7 +18,7 @@ const FromLogin = () => {
           text={"Password"}
           placeholder={"******"}
         />
-        <Button type={"submit"} buttonName={"Login"} />
+        <Button type={"submit"} buttonName={"Login"} classname="button" />
       </form>
     </Fragment>
   );

@@ -114,3 +114,7 @@
   body{
     overflow-x: hidden;  
   }
+
+  .button {
+    @apply mt-5 w-full;
+  }

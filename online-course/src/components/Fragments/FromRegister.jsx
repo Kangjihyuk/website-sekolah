@@ -30,7 +30,7 @@ const FromRegister = () => {
           text={"confirm your password"}
           placeholder={"******"}
         />
-        <Button type={"submit"} buttonName={"Register"} />
+        <Button type={"submit"} buttonName={"Register"} classname="button" />
       </form>
     </Fragment>
   );
