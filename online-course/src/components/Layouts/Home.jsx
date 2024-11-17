@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <Fragment>
-      <div className="bg-primary/40 h-[100vh] flex flex-col sm:h-[115vh] md:h-[110vh] lg:h-[127vh] xl:h-[140vh]">
+      <div className="bg-primary/40 h-[110vh] flex flex-col sm:h-[110vh] md:h-[120vh] lg:h-[140vh] xl:h-[140vh]">
         <div className="container flex flex-col items-center">
           <Title title="Learn best Online Courses" />
           <Desc desc="48,000 online courses for you" />
