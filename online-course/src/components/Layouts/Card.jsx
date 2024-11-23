@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import {
   Student,
   ChalkboardTeacher,
@@ -29,7 +29,7 @@ const JsonCard = [
 const Card = () => {
   return (
     <Fragment>
-      <div className="container mt-10 grid place-content-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="container mt-20 grid place-content-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {JsonCard.map((card) => {
           const conditionalCLass =
             card.id === JsonCard.length

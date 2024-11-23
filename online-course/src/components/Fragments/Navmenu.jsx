@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Elements/Button";
+import LinkNav from "../Elements/LinkNav";
 
 const NavMenu = [
   {
@@ -33,16 +34,7 @@ const Navmenu = ({ open, scroll }) => {
       scroll={scroll}
     >
       {NavMenu.map((item, index) => (
-        <ul key={index} className="mt-5">
-          <li>
-            <a
-              href={item.link}
-              className="poppins-bold tracking-widest hover:text-primary"
-            >
-              {item.name}
-            </a>
-          </li>
-        </ul>
+        <LinkNav key={index} {...item} style="hover:text-white" />
       ))}
       <Button buttonName="Started" customization="md:hidden mt-5 " />
     </div>

@@ -15,24 +15,36 @@ export const getApi = async () => {
   }
 };
 
-export const Register =
-  ({ fullname, email, password, confirmpassword }) =>
-  async (dispatch) => {
-    const headers = {
-      "Content-Type": "application/json",
-    };
-    const body = JSON.stringify({ fullname, email, password, confirmpassword });
-    console.log(body);
-    try {
-      const res = await axios.post("http://localhost:5000/register", body, {
-        headers: headers,
-      });
-      dispatch({
-        payload: res.data,
-      });
-    } catch (err) {
-      const errors = err.response.data.errors;
-      console.log(errors);
-    }
-  };
-  
+export const Register = async ({
+  username,
+  email,
+  password,
+  confirmpassword,
+}) => {
+  const headers = { "Content-Type": "application/json" };
+  const body = JSON.stringify({ username, email, password, confirmpassword });
+
+  try {
+    const res = await axios.post("http://localhost:5000/register", body, {
+      headers,
+    });
+    return res.data;
+  } catch (err) {
+    throw err.response?.data?.errors || "Unknown error occurred";
+  }
+};
+
+export const Login = async ({ email, password }) => {
+  const headers = { "Content-Type": "application/json" };
+  const body = JSON.stringify({ email, password });
+
+  try {
+    const res = await axios.post("http://localhost:5000/login", body, {
+      headers,
+    });
+    console.log({ "login success": res.data });
+    return res.data;
+  } catch (err) {
+    throw err.response?.data?.message || "error";
+  }
+};
