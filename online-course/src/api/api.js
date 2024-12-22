@@ -6,6 +6,7 @@ export const getApi = async () => {
       headers: {
         "Content-Type": "application/json ",
       },
+      withCredentials: true,
     });
     const data = response.data;
     return data;
@@ -46,5 +47,20 @@ export const Login = async ({ email, password }) => {
     return res.data;
   } catch (err) {
     throw err.response?.data?.message || "error";
+  }
+};
+
+export const Comments = async () => {
+  try {
+    const response = await axios.get("http://localhost:5000/comments", {
+      headers: {
+        "Content-Type": "application/json ",
+      },
+      withCredentials: true,
+    });
+    const data = response.data;
+    return data;
+  } catch (error) {
+    throw error.message;
   }
 };

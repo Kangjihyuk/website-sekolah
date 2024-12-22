@@ -1,30 +1,13 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 import Desc from "../Elements/Decs";
 import Title from "../Elements/Title";
 import Down from "../Elements/Down";
 import Button from "../Elements/Button";
-import { getApi } from "../../api/api";
 import DropDownBtn from "../Elements/DropDownBtn";
 import Input from "../Elements/Input";
 import Image from "../Elements/image";
 
-const Home = () => {
-  const [post, setPost] = useState([]);
-  const [error, setError] = useState(null);
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await getApi();
-        setPost(response.data);
-        console.log(response);
-      } catch (error) {
-        setError(error);
-      }
-    };
-    getData();
-  }, []);
-  console.log({ "api get": post });
-
+const Home = ({ course }) => {
   return (
     <Fragment>
       <div className="bg-primary/40 h-[110vh] flex flex-col sm:h-[110vh] md:h-[120vh] lg:h-[140vh] xl:h-[140vh]">
@@ -41,7 +24,7 @@ const Home = () => {
           <Down
             dropdownId="dropdown-hover"
             buttonId="dropdown-hover-button"
-            post={post}
+            course={course}
           />
           <div>
             <Input

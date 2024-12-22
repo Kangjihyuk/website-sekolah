@@ -7,8 +7,11 @@ const db = mysql.createConnection({
 });
 
 db.connect((err) => {
-  if (err) throw err;
-  console.log("connected!");
+  if (err) {
+    console.log({ error: err.stack });
+    return;
+  }
+  console.log("connected as id " + db.threadId);
 });
 
 module.exports = db;

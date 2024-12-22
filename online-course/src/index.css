@@ -118,3 +118,7 @@
   .button {
     @apply mt-5 w-full;
   }
+
+  .next-button{
+    @apply text-primary/90 text-xl  w-10  cursor-pointer hover:w-11 transition-all active:text-blue-200 active:bg-blue-600
+  }
