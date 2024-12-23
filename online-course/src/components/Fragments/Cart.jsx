@@ -47,7 +47,7 @@ const CartTitle = ({ title, desc, user, duration }) => {
     <div className="p-5">
       <Title
         title={title}
-        style="mt-0 text-black md:text-2xl md:mt-2 lg:text-xl lg:mt-3 line-clamp-1"
+        style="mt-0 text-black md:text-2xl md:mt-2 lg:text-xl lg:-mt-3 line-clamp-1"
       />
       <Desc
         desc={desc}

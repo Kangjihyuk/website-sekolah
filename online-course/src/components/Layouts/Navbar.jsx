@@ -10,6 +10,7 @@ const Navbar = () => {
       document.querySelector(".item").classList.add("translate-x-full");
     } else {
       document.querySelector(".item").classList.remove("translate-x-0");
+      setOpen(false);
     }
   };
 

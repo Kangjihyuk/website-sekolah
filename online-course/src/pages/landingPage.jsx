@@ -5,6 +5,7 @@ import Card from "../components/Layouts/Card";
 import { Course } from "../components/Layouts/Course";
 import { Comments, getApi } from "../api/api";
 import Instructors from "../components/Layouts/Instructors";
+import Blog from "../components/Layouts/Blog";
 
 const LandingPage = () => {
   const [course, setCourse] = useState([]);
@@ -32,10 +33,11 @@ const LandingPage = () => {
   return (
     <>
       <Navbar />
-      <Home course={course} />
+      <Home course={course} id="home" />
       <Card />
-      <Course course={course} />
+      <Course course={course} id="course" />
       <Instructors comments={comments} />
+      <Blog />
     </>
   );
 };

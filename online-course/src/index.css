@@ -114,6 +114,10 @@
   body{
     overflow-x: hidden;  
   }
+  
+  html{
+    scroll-behavior:smooth;
+  }
 
   .button {
     @apply mt-5 w-full;

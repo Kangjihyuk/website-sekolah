@@ -7,7 +7,12 @@ const Comments = ({ name, comments, images, classComments }) => {
         alt="image here"
         className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-800"
       >
-        <img src={images} alt={name} className="w-full h-full rounded-lg" />
+        <img
+          src={images}
+          alt={name}
+          className="w-full h-full rounded-lg"
+          loading="lazy"
+        />
       </div>
 
       <div className="">

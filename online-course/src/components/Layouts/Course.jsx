@@ -2,11 +2,11 @@ import Title from "../Elements/Title";
 import LinkNav from "../Elements/LinkNav";
 import Cart from "../Fragments/Cart";
 
-export const Course = ({ course }) => {
+export const Course = ({ course, id }) => {
   const displayTitle = new Set();
   return (
     <>
-      <div className="container mt-20">
+      <div className="container mt-20" id={id}>
         <Title title="Online Courses" style="flex justify-center" />
         <div className="flex flex-wrap justify-center gap-5">
           {course.map((item, index) => {

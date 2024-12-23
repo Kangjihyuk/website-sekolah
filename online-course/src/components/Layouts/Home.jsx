@@ -7,10 +7,13 @@ import DropDownBtn from "../Elements/DropDownBtn";
 import Input from "../Elements/Input";
 import Image from "../Elements/image";
 
-const Home = ({ course }) => {
+const Home = ({ course, id }) => {
   return (
     <Fragment>
-      <div className="bg-primary/40 h-[110vh] flex flex-col sm:h-[110vh] md:h-[120vh] lg:h-[140vh] xl:h-[140vh]">
+      <div
+        className="bg-primary/40 h-[110vh] flex flex-col sm:h-[110vh] md:h-[120vh] lg:h-[140vh] xl:h-[140vh]"
+        id={id}
+      >
         <div className="container flex flex-col items-center">
           <Title title="Learn best Online Courses" />
           <Desc desc="48,000 online courses for you" />

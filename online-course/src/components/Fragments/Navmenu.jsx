@@ -1,11 +1,10 @@
-import React from "react";
 import Button from "../Elements/Button";
 import LinkNav from "../Elements/LinkNav";
 
 const NavMenu = [
   {
     name: "Home",
-    link: "/",
+    link: "#home",
   },
   {
     name: "About",
@@ -13,7 +12,7 @@ const NavMenu = [
   },
   {
     name: "Courses",
-    link: "/course",
+    link: "#course",
   },
   {
     name: "Blog",
