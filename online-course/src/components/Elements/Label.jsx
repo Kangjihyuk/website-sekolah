@@ -1,9 +1,9 @@
 import React from "react";
 
-const Label = ({ type, text }) => {
+const Label = ({ htmlFor, text }) => {
   return (
     <label
-      htmlFor={type}
+      htmlFor={htmlFor}
       className="block mb-2 text-sm font-medium text-gray-900 "
     >
       {text}

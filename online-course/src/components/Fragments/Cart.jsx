@@ -26,15 +26,19 @@ const CartImage = ({ images, alt, price }) => {
         loading="lazy"
         className="rounded-t-xl w-full h-[250px] object-cover border-2 border-primary p-2"
       />
-      <div className="absolute bottom-2 left-5 flex gap-[12rem]">
-        <span className="font-bold bg-[#EB5B00] px-2 tracking-wide py-1 rounded-lg text-white transition-all ">
+      <div className="absolute bottom-2 left-5 flex  justify-between items-center w-[90%]">
+        <div className="font-bold bg-[#EB5B00] px-2 tracking-wide py-1 rounded-lg text-white transition-all ">
           ${" "}
           {price.toLocaleString("id-ID", {
             styles: "currency",
             currency: "USD",
           })}
-        </span>
-        <div className="flex items-center">
+        </div>
+        <div className="flex">
+          <CartStar />
+          <CartStar />
+          <CartStar />
+          <CartStar />
           <CartStar />
         </div>
       </div>
@@ -44,14 +48,14 @@ const CartImage = ({ images, alt, price }) => {
 
 const CartTitle = ({ title, desc, user, duration }) => {
   return (
-    <div className="p-5">
+    <div className="p-5 group">
       <Title
         title={title}
-        style="mt-0 text-black md:text-2xl md:mt-2 lg:text-xl lg:-mt-3 line-clamp-1"
+        style="mt-0 text-black md:text-xl lg:text-xl  line-clamp-1"
       />
       <Desc
         desc={desc}
-        style="line-clamp-5 text-justify  hover:transform hover:ease-in duration-500 md:text-lg lg:text-xl"
+        style="line-clamp-6 text-justify  hover:transform hover:ease-in duration-500 md:text-lg lg:text-xl "
       />
       <hr className="my-4 h-[2px] bg-gray-200" />
       <div className="flex justify-between mt-5">

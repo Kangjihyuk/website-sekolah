@@ -16,11 +16,11 @@ const NavMenu = [
   },
   {
     name: "Blog",
-    link: "/blog",
+    link: "#blog",
   },
   {
     name: "Contact",
-    link: "/contact",
+    link: "#contact",
   },
 ];
 
@@ -33,7 +33,7 @@ const Navmenu = ({ open, scroll }) => {
       scroll={scroll}
     >
       {NavMenu.map((item, index) => (
-        <LinkNav key={index} {...item} style="hover:text-white" />
+        <LinkNav key={index} {...item} style="hover:text-white poppins-bold" />
       ))}
       <Button buttonName="Started" customization="md:hidden mt-5 " />
     </div>

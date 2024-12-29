@@ -6,9 +6,9 @@ import Slider from "../Fragments/Slider";
 const Instructors = ({ comments }) => {
   return (
     <Fragment>
-      <div className="mt-20 bg-primary/40 max-h-[50%]">
+      <div className="mt-20 lg:mt-32 bg-primary/40 max-h-[50%] p-4">
         <div className="container flex justify-between items-center">
-          <Title title="Instructors" />
+          <Title title="Instructors" style={"lg:text-4xl"} />
           <div className="flex items-center gap-2 mt-4">
             <GrLinkPrevious className="prev-button" />
             <GrLinkPrevious className="next-button rotate-180 rounded-sm bg-primary/20" />

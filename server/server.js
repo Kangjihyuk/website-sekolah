@@ -4,7 +4,7 @@ const db = require("./db");
 const response = require("./response");
 const cors = require("cors");
 const multer = require("multer");
-const fs = require("fs"); // Import fs module for directory handling
+const fs = require("fs");
 const path = require("path");
 require("dotenv").config();
 
@@ -139,7 +139,6 @@ app.post("/login", (req, res) => {
       return response(400, err, "invalid email or password", res);
 
     response(200, user, "success", res);
-    console.log(fields);
   });
 });
 

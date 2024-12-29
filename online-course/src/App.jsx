@@ -4,6 +4,7 @@ import PageNotFound from "./pages/pageNotFound";
 import Login from "./pages/login";
 import Register from "./pages/register";
 import About from "./pages/About";
+import Tugas from "./pages/tugas";
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/about" element={<About />}></Route>
+        <Route path="/tugas" element={<Tugas />}></Route>
       </Routes>
     </BrowserRouter>
   );

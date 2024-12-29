@@ -5,6 +5,7 @@ const Input = ({ type, name, placeholder, style, onChange, value }) => {
     <input
       type={type}
       name={name}
+      id={name}
       aria-label={placeholder}
       className={`bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ${style}`}
       placeholder={placeholder}

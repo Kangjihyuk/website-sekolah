@@ -38,6 +38,12 @@ const FromRegister = () => {
       console.log("register success");
     } catch (err) {
       console.log(err);
+       setRegister({
+         username: "",
+         email: "",
+         password: "",
+         confirmpassword: "",
+       });
       Swal.fire({
         title: "error",
         text: err.response?.data?.errors || "Unknown error occurred",

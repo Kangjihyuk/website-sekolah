@@ -17,9 +17,9 @@ const Comments = ({ name, comments, images, classComments }) => {
 
       <div className="">
         <h2 className="text-2xl font-bold mb-2 text-gray-100">{name}</h2>
-        <p className="text-gray-200 line-clamp-3">{comments}</p>
+        <p className="text-gray-200 line-clamp-3 ">{comments}</p>
       </div>
-      <button className="hover:bg-gray-700 bg-gray-800 text-gray-100 mt-6 rounded p-2 px-6">
+      <button className="hover:bg-gray-700 bg-gray-800 text-gray-100 mt-6 rounded p-2 px-6 animate-bounce">
         {classComments}
       </button>
     </div>
