@@ -1,9 +1,36 @@
-import react from "react";
-import { Link } from "react-router-dom";
+import react, { useState } from "react";
+import Icon from "../components/Elements/Icon";
+import Hamburger from "../components/Elements/Hamburger";
+import Menu from "../components/Fragments/Menu";
+import Button from "../components/Elements/Button";
 const Tugas = () => {
+  const scroll = () => {
+    if (window.scrollY > 0) {
+      document.querySelector(".item").classList.add("translate-x-full");
+    } else {
+      document.querySelector(".item").classList.remove("translate-x-0");
+      setOpen(false);
+    }
+  };
+
+  window.onscroll = () => {
+    scroll();
+    const peer = document.querySelector(".peer");
+    peer.checked = false;
+  };
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(!open);
+  };
   return (
     <>
-      <section className="flex justify-center mt-10 relative">
+      <div className="flex items-center pl-[2rem] pr-[2rem] py-[1rem] justify-between relative bg-primary lg:fixed lg:w-full z-10 overflow -mt-24">
+        <Icon />
+        <Hamburger handleOpen={handleOpen} />
+        <Menu open={open} scroll={scroll} />
+        <Button buttonName="Get Started" customization="hidden sm:block" />
+      </div>
+      <section className="flex justify-center mt-24 relative">
         <table border="0">
           <tr>
             <td>
@@ -134,14 +161,6 @@ const Tugas = () => {
             </td>
           </tr>
         </table>
-        <div>
-          <Link
-            to={"/"}
-            className="text-white font-bold absolute top-0 left-0 py-2 px-5 bg-primary rounded-lg -translate-y-10"
-          >
-            {"<- "}to landingPage
-          </Link>
-        </div>
       </section>
     </>
   );
