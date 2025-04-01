@@ -6,6 +6,7 @@ import Button from "../Elements/Button";
 import DropDownBtn from "../Elements/DropDownBtn";
 import Input from "../Elements/Input";
 import Image from "../Elements/image";
+import Hero from "../../../images/assets/hero.png";
 
 const Home = ({ course, id }) => {
   return (
@@ -44,7 +45,7 @@ const Home = ({ course, id }) => {
             classname="sm:px-[2rem] lg:px-[2.5rem] lg:py-[0.7rem]"
           />
         </div>
-        <Image src="../../../images/assets/hero.png" alt={"hero image"} />
+        <Image src={Hero} alt={"hero-image"} />
       </div>
     </Fragment>
   );
